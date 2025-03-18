@@ -33,7 +33,6 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		current.Next = &ListNode{Val: sum % 10}
 		carry = sum / 10
 		current = current.Next
-		fmt.Println("dummy : ", dummy)
 	}
 	return dummy.Next
 }
