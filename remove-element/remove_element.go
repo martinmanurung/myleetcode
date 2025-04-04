@@ -17,15 +17,14 @@ k := 0
 	return k
 */
 func removeElement(nums []int, val int) int {
-	expectedArray := []int{}
+	j := 0
 	for i := 0; i < len(nums); i++ {
 		if nums[i] != val {
-			expectedArray = append(expectedArray, nums[i])
+			nums[j] = nums[i]
+			j++
 		}
 	}
-
-	fmt.Println(expectedArray)
-	return len(expectedArray)
+	return j
 }
 
 func main() {
